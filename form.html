@@ -1,0 +1,194 @@
+# form表單建置
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM TEST</title>
+    <style>
+        .st1 {
+            border-bottom: 3px dashed gray;
+            width: 450px;
+            margin: 20px;
+            padding: 10px;
+            /* color: brown; */
+
+        }
+
+        .su1 {
+            width: 450px;
+            margin: 20px;
+            text-align: center;
+
+        }
+
+        .st2 {
+            width: 100px;
+            float: left;
+            text-align: right;
+            /* border: 2px double aquamarine; */
+            /* color: brown; */
+        }
+
+        textarea {
+            resize: none
+        }
+
+        .t1 {
+            width: 100px;
+            /* margin: 5px; */
+            /* padding: 20px; */
+            float: left;
+            text-align: right;
+        }
+
+        fieldset {
+            width: 500px;
+            border: 2px double #0080FF;
+            border-radius: 20px;
+            /* text-align: center; */
+
+        }
+
+        legend {
+            margin-left: 30%;
+        }
+
+        strong {
+            color: blueviolet;
+            border-bottom: 2px double salmon;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <form action="#" method="get" enctype="multipart/form-data">
+        <!--method="post"會將data傳送到指定路徑，(action內文)若路徑錯誤會導致資料傳送異常-->
+        <fieldset>
+            <legend>個人資料一<strong>(必填)</strong></legend>
+            <!-- <strong></strong>會讓字變粗 -->
+            <!-- <em></em>會讓字變斜 -->
+            <!-- <s></s>會把內文標上刪除線 -->
+            <!-- 以上為文字語意元素，元素都是有其特殊意義的 -->
+            <div class="st1">
+
+                <label for="account1" class="st2">姓名:</label> <input type="text" id="account1" name="account"autofocus placeholder="guest" autocomplete="off" size="10"  >
+
+            </div>
+            <div class="st1">
+                <label for="" class="t1">性別:</label>
+                <label>
+                    <input type="radio" name="gender" id="">男性
+                </label>
+                <label>
+                    <input type="radio" name="gender" id="">女性
+                </label>
+            </div>
+            <div class="st1">
+                <label for="pwd" class="st2">密碼:</label><input type="password" id="pwd" name="pwd" maxlength="6">
+            </div>
+            <div class="st1">
+                <label for="" class="st2">生日:</label><input type="date" id="" name="dt1" maxlength="6">
+            </div>
+            </div>
+            <div class="st1">
+                <label for="" class="st2">email</label><input type="email" id="" name="email" maxlength="6">
+            </div>
+            <div class="st1">
+                <label for="" class="st2">身分證字號</label>
+                <input type="text" id="" name="idcoed" maxlength="10" pattern="[a-z,A-Z]{1}[1-2,8-9]{1}\d{8}">
+            </div>
+
+
+
+        </fieldset>
+        <fieldset>
+            <legend>地址</legend>
+            <div class="st1">
+                <label for="" class="t1">縣市:</label>
+                <select name="addd1" id="" multiple>
+                    <option value="TPE">台北市</option>
+                    <option value="TPH" >新北市</option>
+                    <option value="TYU">桃園市</option>
+                    <option value="HSH">新竹縣</option>
+                    <option value="HSC">新竹市</option>
+                    <option value="MAC">苗栗市</option>
+                    <option value="MAL">苗栗縣</option>
+                    <option value="TXG">臺中市</option>
+                    <option value="CWH">彰化市</option>
+
+                </select>
+
+            </div>
+            <div class="st1">
+                <label for="address" class="t1">完整地址:</label>
+                <input type="text" id="address" name="address" placeholder="請輸入地址" autocomplete="off" size="30">
+
+
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>個人資料二</legend>
+            </div>
+            <div class="st1">
+                <label for="" class="t1">照片:</label><input type="file" name="file1">
+            </div>
+            <div class="st1">
+                <label for="" class="t1">Blog:</label><input type="url" name="hplist" list="hpurls">
+                <datalist id="hpurls">
+                    <option value="https://www.momoshop.com.tw">momoshop</option>
+                    <option value="https://24h.m.pchome.com.tw/"></option>
+                    <option value="https://www.etmall.com.tw">
+                        <!--以上三種寫法皆可，不影響產出，第一種寫法會將網站名稱顯示於網址下方-->
+                </datalist>
+            </div>
+
+
+            <div class="st1">
+                <label for="" class="t1">興趣:</label>
+                <label>
+                    <input type="checkbox" name="hobby" value="music">音樂
+                </label>
+                <label>
+                    <input type="checkbox" name="hobby" value="sprot">運動
+                </label>
+                <label>
+                    <input type="checkbox" name="hobby" value="travel">旅遊
+                </label>
+
+            </div>
+            <div class="st1">
+                <label for="comment" class="st2">意見:</label><textarea cols="30" rows="5" id="comment" name="comment" disabled>hello</textarea>
+            </div>
+        </fieldset>
+        <div class="su1">
+            <input type="submit" value="送出">
+            <input type="reset" value="清除" >
+        </div>
+
+
+
+
+
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

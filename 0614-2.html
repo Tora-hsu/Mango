@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表單</title>
+    <style>
+        /* .box1{
+            border-bottom: 2px dashed brown;
+            width: 500px;
+            margin:20px;
+            padding: 20px;
+        } */
+    </style>
+</head>
+
+<body>
+    <form action="#" method="get" enctype="multipart/form-data">
+        <fieldset>
+            <div class="box1">
+                <label for="account" class="box2">姓名:</label>
+                <input type="text" id="account" name="account" autofocus placeholder="guset ID" autocomplete="off">
+            </div>
+            <div class="box1">
+                <label for="" class="box2">性別:</label>
+                <label>
+                    <input type="radio" name="gender" value="male">男
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female">女
+                </label>
+            </div>
+            <div class="box1">
+                <label for="psw" class="box2">密碼:</label>
+                <input type="password" id="psw" name="psw" maxlength="8">
+            </div>
+        </fieldset>
+        <div class="box1">
+            <label for="" class="box2">興趣:</label>
+            <label>
+                <input type="checkbox" name="hobby" value="music">音樂
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" value="sprot">運動
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" value="reading">閱讀
+            </label>
+        </div>
+
+        <div class="box1">
+            <label for="" class="box2">居住地:</label>
+            <select name="livingln" id="" multiple>
+                <option value="TPE">台北市</option>
+                <option value="TPH">新北市</option>
+                <option value="TYU">桃園市</option>
+                <option value="HSC">新竹市</option>
+
+
+
+
+
+            </select>
+
+
+
+
+            <div>
+                <label for="memo">意見:</label>
+                <textarea cols="40" row="5" id="memo" name="memo">hello</textarea>
+            </div>
+            <div>
+                <input type="submit" value="送出">
+                <input type="reset" value="清除">
+            </div>
+    </form>
+
+</body>
+
+</html>
